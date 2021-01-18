@@ -21,11 +21,70 @@ body {
     padding-top: 70px;
 }
 
-#home > div {
+#home {
     transform: translateY(-10px);
 }
 
 .mySlides {
     display: none;
     width: 100vw;
+}
+
+#us {
+    font-family: 'Heebo', sans-serif;
+    display: grid;
+    grid-template-columns: auto 20vw 20vw 20vw auto;
+    grid-template-rows: 50px 100px 400px;
+    gap: 20px;
+    grid-template-areas:
+        ' . . ti . .'
+        '. de de de .'
+        '. mi vi va .';
+}
+
+#descript {
+    grid-area: ti;
+}
+
+#mision {
+    grid-area: mi;
+}
+
+#vision {
+    grid-area: vi;
+}
+#values {
+    grid-area: va;
+}
+#descript {
+    grid-area: de;
+}
+#us > h2 {
+    grid-area: ti;
+}
+#us {
+    text-align: center;
+}
+
+.card {
+    background-color: cadetblue;
+    border-radius: 25px;
+    box-shadow: 5px 10px darkslategrey;
+}
+@media screen and (max-width: 1030px) {
+    #us {
+        grid-template-columns: auto 30vw 30vw 30vw auto;
+    }
+}
+@media screen and (max-width: 700px) {
+    #us {
+        grid-template-columns: auto 70vw auto;
+        grid-template-rows: 50px 100px repeat(3, 400px);
+        grid-template-areas:
+            '. ti .'
+            '. de .'
+            '. mi .'
+            '. vi .'
+            '. va .';
+    }
 }
