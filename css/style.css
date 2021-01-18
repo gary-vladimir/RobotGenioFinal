@@ -1,0 +1,31 @@
+@import url('nav.css');
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+.container {
+    border: 1px solid red;
+    height: 300vh;
+}
+
+#home,
+#us,
+#courses,
+#awards,
+#contact {
+    padding-top: 70px;
+}
+
+#home > div {
+    transform: translateY(-10px);
+}
+
+.mySlides {
+    display: none;
+    width: 100vw;
+}
