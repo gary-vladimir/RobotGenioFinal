@@ -9,82 +9,111 @@ body {
 }
 
 .container {
-    border: 1px solid red;
-    height: 300vh;
+    height: 500vh;
 }
 
-#home,
 #us,
 #courses,
 #awards,
 #contact {
-    padding-top: 70px;
+    padding-top: 100px;
 }
 
 #home {
-    transform: translateY(-10px);
+    transform: translateY(60px);
 }
 
 .mySlides {
     display: none;
-    width: 100vw;
+    width: 100%;
 }
 
+#courses,
 #us {
     font-family: 'Heebo', sans-serif;
     display: grid;
     grid-template-columns: auto 20vw 20vw 20vw auto;
-    grid-template-rows: 50px 100px 400px;
+    grid-template-rows: 50px auto auto;
     gap: 20px;
     grid-template-areas:
         ' . . ti . .'
-        '. de de de .'
+        'de de de de de'
         '. mi vi va .';
 }
 
-#descript {
-    grid-area: ti;
-}
-
+#Elementary,
 #mision {
     grid-area: mi;
 }
-
+#Junior,
 #vision {
     grid-area: vi;
 }
+#Senior,
 #values {
     grid-area: va;
 }
 #descript {
+    display: flex;
     grid-area: de;
+    background-color: lightblue;
+    justify-content: center;
 }
-#us > h2 {
+h2 {
     grid-area: ti;
 }
-#us {
+
+h2,
+h3 {
     text-align: center;
 }
 
-.card {
-    background-color: cadetblue;
-    border-radius: 25px;
-    box-shadow: 5px 10px darkslategrey;
+#descript > #text {
+    width: 600px;
 }
-@media screen and (max-width: 1030px) {
+#text {
+    padding: 25px;
+    text-align: center;
+}
+
+footer {
+    font-family: 'Heebo', sans-serif;
+    text-align: center;
+    line-height: 50px;
+    height: 50px;
+    background-color: #006d77;
+    color: white;
+}
+
+.card {
+    background-color: gainsboro;
+    border-radius: 25px;
+    box-shadow: 5px 10px gray;
+}
+@media screen and (max-width: 1250px) {
+    #courses,
     #us {
         grid-template-columns: auto 30vw 30vw 30vw auto;
     }
 }
 @media screen and (max-width: 700px) {
+    #descript > #text {
+        width: 100%;
+    }
+    #courses,
     #us {
-        grid-template-columns: auto 70vw auto;
-        grid-template-rows: 50px 100px repeat(3, 400px);
+        grid-template-columns: auto 90vw auto;
+        grid-template-rows: 50px auto repeat(3, auto);
         grid-template-areas:
             '. ti .'
-            '. de .'
+            'de de de'
             '. mi .'
             '. vi .'
             '. va .';
     }
+}
+#us,
+#courses,
+#home {
+    border: 1px solid white;
 }
