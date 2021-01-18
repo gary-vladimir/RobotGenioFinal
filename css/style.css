@@ -2,6 +2,7 @@
 
 html {
     scroll-behavior: smooth;
+    font-family: 'Heebo', sans-serif;
 }
 
 body {
@@ -9,7 +10,8 @@ body {
 }
 
 .container {
-    height: 500vh;
+    height: auto;
+    padding-bottom: 82vh;
 }
 
 #us,
@@ -30,7 +32,6 @@ body {
 
 #courses,
 #us {
-    font-family: 'Heebo', sans-serif;
     display: grid;
     grid-template-columns: auto 20vw 20vw 20vw auto;
     grid-template-rows: 50px auto auto;
@@ -90,6 +91,11 @@ footer {
     border-radius: 25px;
     box-shadow: 5px 10px gray;
 }
+
+#awards > img {
+    margin: -2px;
+    width: 20%;
+}
 @media screen and (max-width: 1250px) {
     #courses,
     #us {
@@ -110,6 +116,10 @@ footer {
             '. mi .'
             '. vi .'
             '. va .';
+    }
+    #awards > img {
+        margin: -2px;
+        width: 50%;
     }
 }
 #us,
